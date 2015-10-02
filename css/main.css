@@ -6,7 +6,8 @@
 
 .header {
   background-color: #FFFFFF;
-  color: #4B494F; }
+  color: #4B494F;
+  text-align: left; }
 
 .banner {
   height: 100px;
@@ -20,11 +21,14 @@
   border-bottom: 1px solid #E6E6E6; }
 
 .wholeQ {
-  border-bottom: 1px solid #E6E6E6; }
+  border-bottom: 1px solid #E6E6E6;
+  color: #555555; }
   .wholeQ .label {
     font-family: serif;
     font-weight: bold; }
-  .wholeQ span {
-    margin: 0 auto; }
   .wholeQ p {
     margin: 0; }
+
+.footer {
+  background-color: #4B494F;
+  color: #989898; }

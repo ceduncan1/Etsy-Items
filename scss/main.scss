@@ -14,8 +14,6 @@ $footerFontColor: #989898;
 }
 
 
-
-
 .wrapper {
   background-color: $backgroundColor;
   font-family: sans-serif;
@@ -27,6 +25,7 @@ $footerFontColor: #989898;
 .header {
   background-color: $headerColor;
   color: $headerFontColor;
+  text-align: left;
 }
 
 
@@ -46,6 +45,7 @@ $footerFontColor: #989898;
 
 .wholeQ{
   @include bottomBorder;
+  color: $fontColor;
 
   .label {
     font-family: serif;
@@ -59,11 +59,16 @@ $footerFontColor: #989898;
 
 
   span {
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 
 
   p {
     margin: 0;
   }
+}
+
+.footer {
+  background-color: $footerColor;
+  color: $footerFontColor;
 }

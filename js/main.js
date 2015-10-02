@@ -36,7 +36,7 @@
   // console.log(converted);
 
   //Convert to string
-  var str = 'The average price is $' + converted;
+  var str = 'The average price is $' + converted + '.';
 
   // console.log(str);
 
@@ -125,20 +125,29 @@
   var problem4 = [];
   items.filter(function (item) {
     if (item.materials.indexOf('wood') !== -1) {
-      problem4.push(item.title)
+      problem4.push(item.title + ' is made of wood.')
     } // end of if statement
   }); // end of filter function
-  // console.log(problem4);
+  console.log(problem4);
 
 
 // Make it show up on page
     //Find out answer element
-  var answer4 = document.querySelector('#answer4');
+  var answer4 = document.querySelector('#answer4'); // don't want to deal with the DOM every time; why it isn't in the .forEach
     //Create a node from our above answer ready for the DOM
-  var textNode = document.createTextNode(problem4);
-    //Append newly created node to our answer element
-  answer4.appendChild(textNode);
+  problem4.forEach(function(title) {
+    var textNode = document.createElement('div'); //instead of 'h6', use <div> and do it .forEach
+      //Append newly created node to our answer element
+    textNode.textContent = title;
+    answer4.appendChild(textNode);
+  
 
+  });
+
+    // answer4.innerText = ''; // gets rid of commas?
+    // problem4.forEach(function(item) {
+      // answer4.appendChild(document.createTextNode(item.title + " is made of wood" + '\n\n\n'));
+    // });
 
 
 
