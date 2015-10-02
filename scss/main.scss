@@ -1,3 +1,69 @@
+
+// Color Variables
+$backgroundColor: #EEEEEE;
+$headerColor: #FFFFFF;
+$headerFontColor: #4B494F;
+$lineColor: #E6E6E6;
+$fontColor: #555555;
+$footerColor: #4B494F;
+$footerFontColor: #989898;
+
+// Mixins
+@mixin bottomBorder() {
+  border-bottom: 1px solid $lineColor;
+}
+
+
+
+
 .wrapper {
-  background-color: #EEEEEE;
+  background-color: $backgroundColor;
+  font-family: sans-serif;
+  text-align: center;
+  width: auto;
+}
+
+
+.header {
+  background-color: $headerColor;
+  color: $headerFontColor;
+}
+
+
+.banner {
+  height: 100px;
+  width: 100%;
+  background-image: url(../etsyBanner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.blank {
+  height: 100px;
+  @include bottomBorder;
+}
+
+.wholeQ{
+  @include bottomBorder;
+
+  .label {
+    font-family: serif;
+    font-weight: bold;
+  }
+
+
+  .answer {
+
+  }
+
+
+  span {
+    margin: 0 auto;
+  }
+
+
+  p {
+    margin: 0;
+  }
 }

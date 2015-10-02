@@ -1,0 +1,30 @@
+.wrapper {
+  background-color: #EEEEEE;
+  font-family: sans-serif;
+  text-align: center;
+  width: auto; }
+
+.header {
+  background-color: #FFFFFF;
+  color: #4B494F; }
+
+.banner {
+  height: 100px;
+  width: 100%;
+  background-image: url(../etsyBanner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.blank {
+  height: 100px;
+  border-bottom: 1px solid #E6E6E6; }
+
+.wholeQ {
+  border-bottom: 1px solid #E6E6E6; }
+  .wholeQ .label {
+    font-family: serif;
+    font-weight: bold; }
+  .wholeQ span {
+    margin: 0 auto; }
+  .wholeQ p {
+    margin: 0; }

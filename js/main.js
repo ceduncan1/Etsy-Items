@@ -97,6 +97,7 @@
     }
   });
 
+  // var thirdAnswerStr = thirdAnswerTitle + ' costs ' + String.fromCharCode('163') + thirdAnswerCost + '.';
   var thirdAnswerStr = thirdAnswerTitle + ' costs ' + String.fromCharCode('163') + thirdAnswerCost + '.';
   // console.log(thirdAnswerStr);
 
