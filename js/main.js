@@ -38,7 +38,7 @@
   //Convert to string
   var str = 'The average price is $' + converted;
 
-  console.log(str);
+  // console.log(str);
 
   // Make it show up on page
     //Find out answer element
@@ -88,25 +88,28 @@
 // 3. Which item has a "GBP" currency code? Display its name and price.
 // if currency code = GBP, return (title) + 'costs' + (price)
       // 1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
-  var thirdAnswer = []
+  var thirdAnswerTitle = [];
+  var thirdAnswerCost = [];
   items.filter(function (item) {
-    if (item.currency_code = 'GBP') {
-      return item.title + 'costs £' + item.price
+    if (item.currency_code === 'GBP') {
+      thirdAnswerTitle.push(item.title)
+      thirdAnswerCost.push(item.price)
     }
   });
 
-// console.log(thirdAnswer);
+  var thirdAnswerStr = thirdAnswerTitle + ' costs ' + String.fromCharCode('163') + thirdAnswerCost + '.';
+  // console.log(thirdAnswerStr);
 
 
 
 
 // Make it show up on page
     //Find out answer element
-  // var answer3 = document.querySelector('#answer3');
+  var answer3 = document.querySelector('#answer3');
     //Create a node from our above answer ready for the DOM
-  // var textNode = document.createTextNode(str);
+  var textNode = document.createTextNode(thirdAnswerStr);
     //Append newly created node to our answer element
-  // answer3.appendChild(textNode);
+  answer3.appendChild(textNode);
 
 
 
@@ -118,22 +121,22 @@
       // Medium Size, Welcome To Our Firepit-Where Friends And Marshmallows Get Toasted At The Same Time-Painted Wood Sign-Custom Colors is made of wood.
       // Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
       // Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
-
-
-
-
-
-
-
+  var problem4 = [];
+  items.filter(function (item) {
+    if (item.materials.indexOf('wood') !== -1) {
+      problem4.push(item.title)
+    } // end of if statement
+  }); // end of filter function
+  // console.log(problem4);
 
 
 // Make it show up on page
     //Find out answer element
-  // var answer4 = document.querySelector('#answer4');
+  var answer4 = document.querySelector('#answer4');
     //Create a node from our above answer ready for the DOM
-  // var textNode = document.createTextNode(str);
+  var textNode = document.createTextNode(problem4);
     //Append newly created node to our answer element
-  // answer4.appendChild(textNode);
+  answer4.appendChild(textNode);
 
 
 
@@ -162,34 +165,40 @@
   }); // end of filter
 
     // var str = fifthAnswer.item.title + ' has ' + fifthAnswer.item.materials.length + ' materials.'
-    console.log(fifthAnswer1);
-    console.log(fifthAnswer2);
+    // console.log(fifthAnswer1);
+    // console.log(fifthAnswer2);
 
   var title1 = fifthAnswer1.shift(); // 
   var number1 = fifthAnswer1.shift();
   var str1 = title1 + ' has ' + number1 + ' materials.'
-  console.log(str1);
+  // console.log(str1);
+
+  var materials1 = fifthAnswer2.shift();
 
   var title2 = fifthAnswer1.shift();
   var number2 = fifthAnswer1.shift();
   var str2 = title2 + ' has ' + number2 + ' materials.'
-  console.log(str2);
+  // console.log(str2);
 
-var answer5A = document.querySelector('#answer5A');
-var textNode = document.createTextNode(str1);
-answer5A.appendChild(textNode);
+  var materials2 = fifthAnswer2.shift();
 
-// var answer5B = document.querySelector('#answer5B');
-// var textNode = document.createTextNode(WHATEVER_VARIABLE_TO_DISPLAY);
-// answer5B.appendChild(textNode);
 
-var answer5C = document.querySelector('#answer5C');
-var textNode = document.createTextNode(str2);
-answer5C.appendChild(textNode);
 
-// var answer5D = document.querySelector('#answer5D');
-// var textNode = document.createTextNode(WHATEVER_VARIABLE_TO_DISPLAY);
-// answer5D.appendChild(textNode);
+  var answer5A = document.querySelector('#answer5A');
+  var textNode = document.createTextNode(str1);
+  answer5A.appendChild(textNode);
+
+  var answer5B = document.querySelector('#answer5B');
+  var textNode = document.createTextNode(materials1);
+  answer5B.appendChild(textNode);
+
+  var answer5C = document.querySelector('#answer5C');
+  var textNode = document.createTextNode(str2);
+  answer5C.appendChild(textNode);
+
+  var answer5D = document.querySelector('#answer5D');
+  var textNode = document.createTextNode(materials2);
+  answer5D.appendChild(textNode);
 
 
 // console.log(fifthAnswer);
@@ -217,12 +226,16 @@ answer5C.appendChild(textNode);
 // filter who_made, i_did into an array; 
       // 18 were made by their sellers
 
-var problem6 = [];
-items.filter(function(item) {
-  if (item.who_made === i_did) {
-    problem6.push(item.title)
-  } // end of if statement
-}); // end of filter function
+  var problem6 = [];
+  items.filter(function(item) {
+    if (item.who_made === 'i_did') {
+      problem6.push(item.title)
+    } // end of if statement
+  }); // end of filter function
+
+  var numWhoMade = problem6.length + ' were made by their sellers.';
+  // console.log(numWhoMade);
+
 
 
 
@@ -235,11 +248,11 @@ items.filter(function(item) {
 
 // Make it show up on page
     //Find out answer element
-  // var answer6 = document.querySelector('#answer6');
+  var answer6 = document.querySelector('#answer6');
     //Create a node from our above answer ready for the DOM
-  // var textNode = document.createTextNode(str);
+  var textNode = document.createTextNode(numWhoMade);
     //Append newly created node to our answer element
-  // answer6.appendChild(textNode);
+  answer6.appendChild(textNode);
 
 })();
 
