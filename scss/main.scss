@@ -12,6 +12,9 @@ $footerFontColor: #989898;
 @mixin bottomBorder() {
   border-bottom: 1px solid $lineColor;
 }
+@mixin serifFontFamily() {
+  font-family: 'Droid Serif', serif;
+}
 
 
 .wrapper {
@@ -26,11 +29,13 @@ $footerFontColor: #989898;
   background-color: $headerColor;
   color: $headerFontColor;
   text-align: left;
+  font-size: 32px;
+  padding: 25px 50px;;
 }
 
 
 .banner {
-  height: 100px;
+  height: 175px;
   width: 100%;
   background-image: url(../etsyBanner.jpg);
   background-repeat: no-repeat;
@@ -39,17 +44,19 @@ $footerFontColor: #989898;
 
 
 .blank {
-  height: 100px;
+  height: 116px;
   @include bottomBorder;
 }
 
 .wholeQ{
   @include bottomBorder;
   color: $fontColor;
+  height: 320px;
 
   .label {
-    font-family: serif;
-    font-weight: bold;
+    @include serifFontFamily;
+    // font-weight: bold;
+    font-size: 48px;
   }
 
 
@@ -71,4 +78,5 @@ $footerFontColor: #989898;
 .footer {
   background-color: $footerColor;
   color: $footerFontColor;
+  padding: 100px 0 35px 0;
 }

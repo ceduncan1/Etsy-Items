@@ -7,28 +7,32 @@
 .header {
   background-color: #FFFFFF;
   color: #4B494F;
-  text-align: left; }
+  text-align: left;
+  font-size: 32px;
+  padding: 25px 50px; }
 
 .banner {
-  height: 100px;
+  height: 175px;
   width: 100%;
   background-image: url(../etsyBanner.jpg);
   background-repeat: no-repeat;
   background-position: center center; }
 
 .blank {
-  height: 100px;
+  height: 116px;
   border-bottom: 1px solid #E6E6E6; }
 
 .wholeQ {
   border-bottom: 1px solid #E6E6E6;
-  color: #555555; }
+  color: #555555;
+  height: 320px; }
   .wholeQ .label {
-    font-family: serif;
-    font-weight: bold; }
+    font-family: 'Droid Serif', serif;
+    font-size: 48px; }
   .wholeQ p {
     margin: 0; }
 
 .footer {
   background-color: #4B494F;
-  color: #989898; }
+  color: #989898;
+  padding: 100px 0 35px 0; }
